@@ -10,7 +10,7 @@ export default defineConfig({
   },
   use: {
     trace: 'on',
-    headless: false,
+    headless: process.env.CI ? true : false,
     screenshot: 'on',
   },
   projects: [
