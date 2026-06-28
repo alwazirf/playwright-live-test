@@ -30,6 +30,15 @@ Berikut adalah langkah-langkah untuk menginstal dependency dan menjalankan autom
    npx playwright show-report
    ```
 
+## Cara Menjalankan Test via GitHub Actions
+Bagi *reviewer* yang ingin menjalankan pengujian tanpa instalasi lokal, tes ini telah terintegrasi dengan GitHub Actions. Berikut adalah cara menjalankannya:
+
+1. **Jalankan Workflow**: Pergi ke tab **Actions** di repositori GitHub.
+2. Pada menu sebelah kiri, pilih workflow **Playwright Tests**.
+3. Klik tombol **Run workflow** berwarna abu-abu yang ada di sebelah kanan.
+4. Pastikan *branch* yang dipilih adalah `main`, lalu klik tombol hijau **Run workflow**.
+5. Tunggu hingga proses pengujian selesai (tanda centang hijau). Anda dapat mengunduh laporan tes (Playwright HTML Report) pada bagian **Artifacts** di halaman detail *run* tersebut. atau bisa juga menggunakan file trace.zip yang telah digenereate lalu silahkan buka file tersebut pada halaman berikut: https://trace.playwright.dev/
+
 ## Struktur Project
 *   `tests/`: Direktori yang berisi file pengujian utama (`orangeHRM.spec.js`) serta file pengaturan autentikasi awal (`auth.setup.js`).
 *   `pages/`: Implementasi pola *Page Object Model* (POM). Berisi class yang merepresentasikan interaksi dan lokator pada halaman web (`LoginPage.js`, `PimPage.js`).

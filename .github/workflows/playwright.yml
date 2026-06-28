@@ -5,10 +5,10 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  workflow_dispatch: # Memungkinkan reviewer untuk menjalankan secara manual dari GitHub Actions UI
+  workflow_dispatch:
 
 jobs:
-  test:
+  live-test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
