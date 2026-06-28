@@ -9,7 +9,7 @@ export default defineConfig({
     timeout: 60000
   },
   use: {
-    trace: 'on-first-retry',
+    trace: 'on',
     headless: false,
     screenshot: 'on',
   },
